@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC25D5D020AD4D7A009DBF05 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC25D5CF20AD4D79009DBF05 /* SwiftyJSON.framework */; };
+		AC3C647F20ACFBC90009F11D /* SuccessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C647E20ACFBC90009F11D /* SuccessTableViewController.swift */; };
+		AC45132F20A25DB800EC8C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45132E20A25DB800EC8C43 /* AppDelegate.swift */; };
+		AC45133420A25DB800EC8C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC45133220A25DB800EC8C43 /* Main.storyboard */; };
+		AC45133620A25DB800EC8C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC45133520A25DB800EC8C43 /* Assets.xcassets */; };
+		AC45133920A25DB800EC8C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC45133720A25DB800EC8C43 /* LaunchScreen.storyboard */; };
+		AC45134120A2643300EC8C43 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45134020A2643300EC8C43 /* LogInViewController.swift */; };
+		AC4BD42320B4C23C0016F80F /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4BD42220B4C23C0016F80F /* AccountTableViewController.swift */; };
+		AC5D709A20B513FD00C90C46 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D709920B513FD00C90C46 /* Account.swift */; };
+		AC5D709C20B514F700C90C46 /* TrophiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D709B20B514F700C90C46 /* TrophiesTableViewController.swift */; };
+		AC5D709E20B5182000C90C46 /* Trophies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D709D20B5182000C90C46 /* Trophies.swift */; };
+		AC5D70A020B51D9700C90C46 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D709F20B51D9700C90C46 /* DescriptionViewController.swift */; };
+		ACB74DCC20AC028A0088785D /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB74DCB20AC028A0088785D /* KeychainWrapper.swift */; };
+		ACB74DCE20AC02C20088785D /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB74DCD20AC02C20088785D /* KeychainItemAccessibility.swift */; };
+		ACB74DD020AC0CEB0088785D /* Subreddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB74DCF20AC0CEB0088785D /* Subreddit.swift */; };
+		ACB74DD220AC115A0088785D /* SubredditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB74DD120AC115A0088785D /* SubredditController.swift */; };
+		ACB7ACBC20A514C800AA3CC6 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7ACBB20A514C800AA3CC6 /* NetworkController.swift */; };
+		ACB7ACBE20A518AA00AA3CC6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7ACBD20A518AA00AA3CC6 /* Response.swift */; };
+		ACD5C26C20A544D300998246 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD5C26A20A544D300998246 /* Alamofire.framework */; };
+		ACD5C26D20A544D300998246 /* OAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD5C26B20A544D300998246 /* OAuth2.framework */; };
+		ACD5D16520ACF42800603B65 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5D16420ACF42800603B65 /* RequestController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AC25D5CF20AD4D79009DBF05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		AC3C647E20ACFBC90009F11D /* SuccessTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessTableViewController.swift; sourceTree = "<group>"; };
+		AC45132B20A25DB800EC8C43 /* Voyager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voyager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC45132E20A25DB800EC8C43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC45133320A25DB800EC8C43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC45133520A25DB800EC8C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC45133820A25DB800EC8C43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC45133A20A25DB800EC8C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC45134020A2643300EC8C43 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		AC4BD42220B4C23C0016F80F /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		AC5D709920B513FD00C90C46 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		AC5D709B20B514F700C90C46 /* TrophiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophiesTableViewController.swift; sourceTree = "<group>"; };
+		AC5D709D20B5182000C90C46 /* Trophies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophies.swift; sourceTree = "<group>"; };
+		AC5D709F20B51D9700C90C46 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		ACB74DCB20AC028A0088785D /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		ACB74DCD20AC02C20088785D /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		ACB74DCF20AC0CEB0088785D /* Subreddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subreddit.swift; sourceTree = "<group>"; };
+		ACB74DD120AC115A0088785D /* SubredditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditController.swift; sourceTree = "<group>"; };
+		ACB7ACBB20A514C800AA3CC6 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		ACB7ACBD20A518AA00AA3CC6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		ACD5C26A20A544D300998246 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		ACD5C26B20A544D300998246 /* OAuth2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuth2.framework; path = Carthage/Build/iOS/OAuth2.framework; sourceTree = "<group>"; };
+		ACD5D16420ACF42800603B65 /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC45132820A25DB800EC8C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC25D5D020AD4D7A009DBF05 /* SwiftyJSON.framework in Frameworks */,
+				ACD5C26C20A544D300998246 /* Alamofire.framework in Frameworks */,
+				ACD5C26D20A544D300998246 /* OAuth2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40E36EAB8D2B5896CC102D8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC25D5CF20AD4D79009DBF05 /* SwiftyJSON.framework */,
+				ACD5C26A20A544D300998246 /* Alamofire.framework */,
+				ACD5C26B20A544D300998246 /* OAuth2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC45132220A25DB800EC8C43 = {
+			isa = PBXGroup;
+			children = (
+				AC45132D20A25DB800EC8C43 /* Voyager */,
+				AC45132C20A25DB800EC8C43 /* Products */,
+				40E36EAB8D2B5896CC102D8D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC45132C20A25DB800EC8C43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC45132B20A25DB800EC8C43 /* Voyager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC45132D20A25DB800EC8C43 /* Voyager */ = {
+			isa = PBXGroup;
+			children = (
+				AC3C647E20ACFBC90009F11D /* SuccessTableViewController.swift */,
+				ACD5D16320ACEFAA00603B65 /* Keychain */,
+				AC45132E20A25DB800EC8C43 /* AppDelegate.swift */,
+				AC45133220A25DB800EC8C43 /* Main.storyboard */,
+				AC5D709F20B51D9700C90C46 /* DescriptionViewController.swift */,
+				AC5D709B20B514F700C90C46 /* TrophiesTableViewController.swift */,
+				AC5D709D20B5182000C90C46 /* Trophies.swift */,
+				AC5D709920B513FD00C90C46 /* Account.swift */,
+				AC4BD42220B4C23C0016F80F /* AccountTableViewController.swift */,
+				ACB74DCF20AC0CEB0088785D /* Subreddit.swift */,
+				ACB74DD120AC115A0088785D /* SubredditController.swift */,
+				AC45134020A2643300EC8C43 /* LogInViewController.swift */,
+				ACD5D16420ACF42800603B65 /* RequestController.swift */,
+				ACB7ACBD20A518AA00AA3CC6 /* Response.swift */,
+				ACB7ACBB20A514C800AA3CC6 /* NetworkController.swift */,
+				AC45133520A25DB800EC8C43 /* Assets.xcassets */,
+				AC45133720A25DB800EC8C43 /* LaunchScreen.storyboard */,
+				AC45133A20A25DB800EC8C43 /* Info.plist */,
+			);
+			path = Voyager;
+			sourceTree = "<group>";
+		};
+		ACD5D16320ACEFAA00603B65 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				ACB74DCD20AC02C20088785D /* KeychainItemAccessibility.swift */,
+				ACB74DCB20AC028A0088785D /* KeychainWrapper.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC45132A20A25DB800EC8C43 /* Voyager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC45133D20A25DB800EC8C43 /* Build configuration list for PBXNativeTarget "Voyager" */;
+			buildPhases = (
+				AC45132720A25DB800EC8C43 /* Sources */,
+				AC45132820A25DB800EC8C43 /* Frameworks */,
+				AC45132920A25DB800EC8C43 /* Resources */,
+				ACD5C26E20A544ED00998246 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Voyager;
+			productName = Voyager;
+			productReference = AC45132B20A25DB800EC8C43 /* Voyager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC45132320A25DB800EC8C43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Garret Koontz";
+				TargetAttributes = {
+					AC45132A20A25DB800EC8C43 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AC45132620A25DB800EC8C43 /* Build configuration list for PBXProject "Voyager" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC45132220A25DB800EC8C43;
+			productRefGroup = AC45132C20A25DB800EC8C43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC45132A20A25DB800EC8C43 /* Voyager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC45132920A25DB800EC8C43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC45133920A25DB800EC8C43 /* LaunchScreen.storyboard in Resources */,
+				AC45133620A25DB800EC8C43 /* Assets.xcassets in Resources */,
+				AC45133420A25DB800EC8C43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ACD5C26E20A544ED00998246 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OAuth2.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC45132720A25DB800EC8C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB74DD020AC0CEB0088785D /* Subreddit.swift in Sources */,
+				ACD5D16520ACF42800603B65 /* RequestController.swift in Sources */,
+				ACB7ACBE20A518AA00AA3CC6 /* Response.swift in Sources */,
+				AC5D70A020B51D9700C90C46 /* DescriptionViewController.swift in Sources */,
+				AC4BD42320B4C23C0016F80F /* AccountTableViewController.swift in Sources */,
+				AC45132F20A25DB800EC8C43 /* AppDelegate.swift in Sources */,
+				AC5D709A20B513FD00C90C46 /* Account.swift in Sources */,
+				ACB74DD220AC115A0088785D /* SubredditController.swift in Sources */,
+				AC45134120A2643300EC8C43 /* LogInViewController.swift in Sources */,
+				AC5D709C20B514F700C90C46 /* TrophiesTableViewController.swift in Sources */,
+				AC3C647F20ACFBC90009F11D /* SuccessTableViewController.swift in Sources */,
+				ACB74DCC20AC028A0088785D /* KeychainWrapper.swift in Sources */,
+				ACB74DCE20AC02C20088785D /* KeychainItemAccessibility.swift in Sources */,
+				ACB7ACBC20A514C800AA3CC6 /* NetworkController.swift in Sources */,
+				AC5D709E20B5182000C90C46 /* Trophies.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC45133220A25DB800EC8C43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC45133320A25DB800EC8C43 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC45133720A25DB800EC8C43 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC45133820A25DB800EC8C43 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC45133B20A25DB800EC8C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC45133C20A25DB800EC8C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC45133E20A25DB800EC8C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AL68EA67A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Voyager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GK.Voyager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC45133F20A25DB800EC8C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AL68EA67A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Voyager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GK.Voyager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC45132620A25DB800EC8C43 /* Build configuration list for PBXProject "Voyager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC45133B20A25DB800EC8C43 /* Debug */,
+				AC45133C20A25DB800EC8C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC45133D20A25DB800EC8C43 /* Build configuration list for PBXNativeTarget "Voyager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC45133E20A25DB800EC8C43 /* Debug */,
+				AC45133F20A25DB800EC8C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC45132320A25DB800EC8C43 /* Project object */;
+}
