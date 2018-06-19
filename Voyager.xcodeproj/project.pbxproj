@@ -15,7 +15,6 @@
 		AC45133920A25DB800EC8C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC45133720A25DB800EC8C43 /* LaunchScreen.storyboard */; };
 		AC45134120A2643300EC8C43 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45134020A2643300EC8C43 /* LogInViewController.swift */; };
 		AC4BD42320B4C23C0016F80F /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4BD42220B4C23C0016F80F /* AccountTableViewController.swift */; };
-		AC5D709A20B513FD00C90C46 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D709920B513FD00C90C46 /* Account.swift */; };
 		AC5D709C20B514F700C90C46 /* TrophiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D709B20B514F700C90C46 /* TrophiesTableViewController.swift */; };
 		AC5D709E20B5182000C90C46 /* Trophies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D709D20B5182000C90C46 /* Trophies.swift */; };
 		AC5D70A020B51D9700C90C46 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D709F20B51D9700C90C46 /* DescriptionViewController.swift */; };
@@ -41,7 +40,6 @@
 		AC45133A20A25DB800EC8C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC45134020A2643300EC8C43 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		AC4BD42220B4C23C0016F80F /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
-		AC5D709920B513FD00C90C46 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		AC5D709B20B514F700C90C46 /* TrophiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophiesTableViewController.swift; sourceTree = "<group>"; };
 		AC5D709D20B5182000C90C46 /* Trophies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophies.swift; sourceTree = "<group>"; };
 		AC5D709F20B51D9700C90C46 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				AC5D709F20B51D9700C90C46 /* DescriptionViewController.swift */,
 				AC5D709B20B514F700C90C46 /* TrophiesTableViewController.swift */,
 				AC5D709D20B5182000C90C46 /* Trophies.swift */,
-				AC5D709920B513FD00C90C46 /* Account.swift */,
 				AC4BD42220B4C23C0016F80F /* AccountTableViewController.swift */,
 				ACB74DCF20AC0CEB0088785D /* Subreddit.swift */,
 				ACB74DD120AC115A0088785D /* SubredditController.swift */,
@@ -229,7 +226,6 @@
 				AC5D70A020B51D9700C90C46 /* DescriptionViewController.swift in Sources */,
 				AC4BD42320B4C23C0016F80F /* AccountTableViewController.swift in Sources */,
 				AC45132F20A25DB800EC8C43 /* AppDelegate.swift in Sources */,
-				AC5D709A20B513FD00C90C46 /* Account.swift in Sources */,
 				ACB74DD220AC115A0088785D /* SubredditController.swift in Sources */,
 				AC45134120A2643300EC8C43 /* LogInViewController.swift in Sources */,
 				AC5D709C20B514F700C90C46 /* TrophiesTableViewController.swift in Sources */,
