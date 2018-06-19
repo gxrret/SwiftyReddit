@@ -60,14 +60,14 @@ class SuccessTableViewController: UITableViewController, SubredditControllerDele
     
     
     // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDescription" {
-            if let indexPath = tableView.indexPathForSelectedRow, let vc = segue.destination as? DescriptionViewController {
-                let subreddit = SubredditController.shared.subreddits[indexPath.row]
-                vc.subreddit = subreddit
-            }
-        }
-    }
-}
+// THIS IS BROKEN FOR NOW
+//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//         if segue.identifier == "toDescription" {
+//             if let indexPath = tableView.indexPathForSelectedRow, let vc = segue.destination as? DescriptionViewController {
+//                 let subreddit = SubredditController.shared.subreddits[indexPath.row]
+//                 vc.subreddit = subreddit
+//             }
+//         }
+//     }
+// }
 
