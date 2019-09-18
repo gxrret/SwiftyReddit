@@ -58,6 +58,7 @@ class SuccessTableViewController: UITableViewController, SubredditControllerDele
     }
     
     // MARK: - Navigation
+<<<<<<< HEAD
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "toDescription" {
@@ -68,4 +69,16 @@ class SuccessTableViewController: UITableViewController, SubredditControllerDele
 //        }
 //    }
 }
+=======
+// THIS IS BROKEN FOR NOW
+//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//         if segue.identifier == "toDescription" {
+//             if let indexPath = tableView.indexPathForSelectedRow, let vc = segue.destination as? DescriptionViewController {
+//                 let subreddit = SubredditController.shared.subreddits[indexPath.row]
+//                 vc.subreddit = subreddit
+//             }
+//         }
+//     }
+// }
+>>>>>>> b6fbb2e55b50f6913027dfae057311dc40731a91
 

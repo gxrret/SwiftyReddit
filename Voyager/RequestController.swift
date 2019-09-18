@@ -40,7 +40,7 @@ class RequestController {
         let params: Parameters = ["grant_type":"refresh_token",
                                   "refresh_token":"\(token)"]
         
-        let username = "qbv2lKywvh8s4Q"
+        let username = "ENTER_YOUR_CLIENT_ID"
         let password = ""
         let loginString = String(format: "%@:%@", username, password)
         let loginData = loginString.data(using: String.Encoding.utf8)! as NSData
