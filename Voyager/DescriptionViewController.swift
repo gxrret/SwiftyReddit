@@ -10,7 +10,6 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
     
-    
     @IBOutlet weak var descTextField: UITextField!
     
     var subreddit:Subreddit?

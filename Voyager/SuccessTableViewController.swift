@@ -24,7 +24,6 @@ class SuccessTableViewController: UITableViewController, SubredditControllerDele
         KeychainWrapper.standard.removeObject(forKey: "deviceID")
     }
     
-    
     @IBAction func getSubs(_ sender: Any) {
     }
     
