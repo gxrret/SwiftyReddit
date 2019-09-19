@@ -42,11 +42,12 @@ class TrophiesTableViewController: UITableViewController {
         RequestController.shared.getNewAccessToken()
         guard let requestURL = URL(string: "https://oauth.reddit.com/api/v1/me/trophies"),
             let token = KeychainWrapper.standard.string(forKey: "accessToken") else { return }
-        let headers = ["User-Agent" : "ios:com.GK.voyager:v1.0 (by /u/ZypherXX)",
+        
+        let headers: HTTPHeaders = ["User-Agent" : "ios:com.GK.voyager:v1.0 (by /u/ZypherXX)",
                        "Content-Type" : "application/x-www-form-urlencoded",
                        "Authorization" : "bearer \(token)"]
         
-        Alamofire.request(requestURL, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        AF.request(requestURL, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             switch response.result {
             case .success:
                 if let value = response.result.value {

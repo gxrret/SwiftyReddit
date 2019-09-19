@@ -1,24 +1,10 @@
 {
-  "Mac" : [
-    {
-      "name" : "OAuth2",
-      "hash" : "a4a0b6b83077bec554d77b496c8ae6c3b8a86c7af68e5b8300cf4ed94bfab864"
-    }
-  ],
-  "watchOS" : [
-
-  ],
-  "tvOS" : [
-    {
-      "name" : "OAuth2",
-      "hash" : "0a928c5ebfd9888f807dc66684819eec0a8e930e5137ec8cbf70a0d878a5d79d"
-    }
-  ],
-  "commitish" : "3.0.3",
+  "commitish" : "4.2.0",
   "iOS" : [
     {
       "name" : "OAuth2",
-      "hash" : "0551353825d655df8bfb30d48212e7da234d91e904a22f7716d84707f34badf9"
+      "hash" : "7ca1e54ea58cbba611ecb7128d734b5957d2cb0bd5ea4ce0501cbad953608723",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]
 }

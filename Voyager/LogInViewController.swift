@@ -15,7 +15,7 @@ class LogInViewController: UIViewController, SFSafariViewControllerDelegate {
     
     static let kSafariViewControllerCloseNotification = "kSafariViewControllerCloseNotification"
     
-    fileprivate var alamofireManager: SessionManager?
+    fileprivate var alamofireManager: Session?
     var safariVC: SFSafariViewController?
     
     override func viewDidLoad() {
@@ -71,10 +71,11 @@ class LogInViewController: UIViewController, SFSafariViewControllerDelegate {
                 let loginData = loginString.data(using: String.Encoding.utf8)! as NSData
                 let base64EncodedString = loginData.base64EncodedString()
                 
-                let headers = ["Content-Type" : "application/x-www-form-urlencoded",
+                let headers: HTTPHeaders = ["Content-Type" : "application/x-www-form-urlencoded",
                                "Authorization" : "Basic \(base64EncodedString)"]
+
                 
-                Alamofire.request(url, method: .post , parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (response) in
+                AF.request(url, method: .post , parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (response) in
                     
                     KeychainWrapper.standard.set(uuid, forKey: "deviceID")
                     if let json = response.result.value as? [String:Any] {

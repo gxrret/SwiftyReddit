@@ -37,7 +37,7 @@ open class OAuth2Base: OAuth2Securable {
 	}
 	
 	/// Settings related to the client-server relationship.
-	open let clientConfig: OAuth2ClientConfig
+	public let clientConfig: OAuth2ClientConfig
 	
 	/// Client-side authorization options.
 	open var authConfig = OAuth2AuthConfig()
@@ -54,7 +54,7 @@ open class OAuth2Base: OAuth2Securable {
 		set { clientConfig.clientSecret = newValue }
 	}
 	
-	/// The name of the client, as used during dynamic client registration. Use "client_name" during initalization to set.
+	/// The name of the client, as used during dynamic client registration. Use "client_name" during initialization to set.
 	open var clientName: String? {
 		get { return clientConfig.clientName }
 	}
@@ -190,7 +190,7 @@ open class OAuth2Base: OAuth2Securable {
 		return authURL.description
 	}
 	
-	override func updateFromKeychainItems(_ items: [String: Any]) {
+	override open func updateFromKeychainItems(_ items: [String: Any]) {
 		for message in clientConfig.updateFromStorableItems(items) {
 			logger?.debug("OAuth2", msg: message)
 		}
@@ -311,15 +311,17 @@ open class OAuth2Base: OAuth2Securable {
 	- returns: An OAuth2Error
 	*/
 	open func assureNoErrorInResponse(_ params: OAuth2JSON, fallback: String? = nil) throws {
-		
-		// "error_description" is optional, we prefer it if it's present
-		if let err_msg = params["error_description"] as? String {
-			throw OAuth2Error.responseError(err_msg)
+		let err_code = params["error"] as? String
+		let err_msg = params["error_description"] as? String
+
+		// "error_description" is optional, we use it if it's present and code is not.
+		if let message = err_msg, message.count > 0 && (err_code?.isEmpty ?? true) {
+			throw OAuth2Error.responseError(message)
 		}
-		
+
 		// the "error" response is required for error responses, so it should be present
-		if let err_code = params["error"] as? String {
-			throw OAuth2Error.fromResponseError(err_code, fallback: fallback)
+		if let code = err_code, code.count > 0 {
+			throw OAuth2Error.fromResponseError(code, description: err_msg, fallback: fallback)
 		}
 	}
 	
@@ -471,7 +473,7 @@ open class OAuth2ContextStore {
 	open var state: String {
 		if _state.isEmpty {
 			_state = UUID().uuidString
-			_state = _state[_state.startIndex..<_state.index(_state.startIndex, offsetBy: 8)]		// only use the first 8 chars, should be enough
+			_state = String(_state[_state.startIndex..<_state.index(_state.startIndex, offsetBy: 8)])        // only use the first 8 chars, should be enough
 		}
 		return _state
 	}

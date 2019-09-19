@@ -96,7 +96,7 @@ open class OAuth2: OAuth2Base {
 	
 	- parameter params:   Optional key/value pairs to pass during authorization and token refresh
 	- parameter callback: The callback to call when authorization finishes (parameters will be non-nil but may be an empty dict), fails or
-	                      is cancelled (error will be non-nil, e.g. `.requestCancelled` if auth was aborted)
+	                      is canceled (error will be non-nil, e.g. `.requestCancelled` if auth was aborted)
 	*/
 	public final func authorize(params: OAuth2StringDict? = nil, callback: @escaping ((OAuth2JSON?, OAuth2Error?) -> Void)) {
 		if isAuthorizing {
@@ -106,9 +106,12 @@ open class OAuth2: OAuth2Base {
 		
 		didAuthorizeOrFail = callback
 		logger?.debug("OAuth2", msg: "Starting authorization")
-		tryToObtainAccessTokenIfNeeded(params: params) { successParams in
+		tryToObtainAccessTokenIfNeeded(params: params) { successParams, error in
 			if let successParams = successParams {
 				self.didAuthorize(withParameters: successParams)
+			}
+			else if let error = error {
+				self.didFail(with: error)
 			}
 			else {
 				self.registerClientIfNeeded() { json, error in
@@ -137,7 +140,7 @@ open class OAuth2: OAuth2Base {
 	- parameter from:     The context to start authorization from, depends on platform (UIViewController or NSWindow, see `authorizeContext`)
 	- parameter params:   Optional key/value pairs to pass during authorization
 	- parameter callback: The callback to call when authorization finishes (parameters will be non-nil but may be an empty dict), fails or
-	                      is cancelled (error will be non-nil, e.g. `.requestCancelled` if auth was aborted)
+	                      is canceled (error will be non-nil, e.g. `.requestCancelled` if auth was aborted)
 	*/
 	open func authorizeEmbedded(from context: AnyObject, params: OAuth2StringDict? = nil, callback: @escaping ((_ authParameters: OAuth2JSON?, _ error: OAuth2Error?) -> Void)) {
 		if isAuthorizing {		// `authorize()` will check this, but we want to exit before changing `authConfig`
@@ -178,22 +181,29 @@ open class OAuth2: OAuth2Base {
 	- parameter callback: The callback to call once the client knows whether it has an access token or not; if `success` is true an
 	                      access token is present
 	*/
-	open func tryToObtainAccessTokenIfNeeded(params: OAuth2StringDict? = nil, callback: @escaping ((OAuth2JSON?) -> Void)) {
+	open func tryToObtainAccessTokenIfNeeded(params: OAuth2StringDict? = nil, callback: @escaping ((OAuth2JSON?, OAuth2Error?) -> Void)) {
 		if hasUnexpiredAccessToken() {
 			logger?.debug("OAuth2", msg: "Have an apparently unexpired access token")
-			callback(OAuth2JSON())
+			callback(OAuth2JSON(), nil)
 		}
 		else {
 			logger?.debug("OAuth2", msg: "No access token, checking if a refresh token is available")
 			doRefreshToken(params: params) { successParams, error in
 				if let successParams = successParams {
-					callback(successParams)
+					callback(successParams, nil)
 				}
 				else {
+					var returnedError: OAuth2Error? = nil
 					if let err = error {
-						self.logger?.debug("OAuth2", msg: "\(err)")
+						self.logger?.debug("OAuth2", msg: "Error refreshing token: \(err)")
+						switch err {
+						case .noRefreshToken, .noClientId, .unauthorizedClient:
+							returnedError = nil
+						default:
+							returnedError = err
+						}
 					}
-					callback(nil)
+					callback(nil, returnedError)
 				}
 			}
 		}

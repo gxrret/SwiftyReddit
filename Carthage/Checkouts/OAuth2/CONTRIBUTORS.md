@@ -3,6 +3,11 @@ Contributors
 
 Contributors to the codebase, in reverse chronological order:
 
+- David Jennes, @davidjennes
+- Tim Schmitz, @tschmitz
+- Maxime Le Moine, @MaximeLM
+- Seb Skuse, @sebskuse
+- David Hardiman, @dhardiman
 - Amaury David, @amaurydavid
 - Lubbo, @lubbo
 - David Everlöf, @everlof
@@ -18,3 +23,4 @@ Contributors to the codebase, in reverse chronological order:
 - Tomohiro Kumagai, @ez-net
 - Tim Sneed, @trsneed
 - Vojto Rinik, @vojto
+- Paul Wilkinson, @paulw11

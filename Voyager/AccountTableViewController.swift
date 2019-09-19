@@ -31,13 +31,15 @@ class AccountTableViewController: UITableViewController {
         let newURL = requestURL.appendingPathComponent("/api/v1/me")
         print(newURL)
         print("my retrieved token is \(token)")
-        let headers = ["User-Agent" : "ios:com.GK.voyager:v1.0 (by /u/ZypherXX)",
+        
+        let headers: HTTPHeaders = ["User-Agent" : "ios:com.GK.voyager:v1.0 (by /u/ZypherXX)",
                        "Content-Type" : "application/x-www-form-urlencoded",
                        "Authorization" : "bearer \(token)"]
+
         
         print(headers)
         
-        Alamofire.request(newURL, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        AF.request(newURL, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             guard let json = response.result.value as? [String:Any] else {
                 if let error = response.result.error {
                     print(error)

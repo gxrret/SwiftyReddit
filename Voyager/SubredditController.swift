@@ -36,13 +36,15 @@ class SubredditController {
             let token = KeychainWrapper.standard.string(forKey: "accessToken") else { return }
         
         print("my retrieved token is \(token)")
-        let headers = ["User-Agent" : "ios:com.GK.voyager:v1.0 (by /u/ZypherXX)",
+        
+        let headers: HTTPHeaders = ["User-Agent" : "ios:com.GK.voyager:v1.0 (by /u/ZypherXX)",
                        "Content-Type" : "application/x-www-form-urlencoded",
                        "Authorization" : "bearer \(token)"]
         
-        print(headers)
+
+//        print(headers)
         
-        Alamofire.request(requestURL, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        AF.request(requestURL, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             
             switch response.result {
             case .success:

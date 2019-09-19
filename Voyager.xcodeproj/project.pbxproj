@@ -99,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				AC3C647E20ACFBC90009F11D /* SuccessTableViewController.swift */,
-				ACD5D16320ACEFAA00603B65 /* Keychain */,
 				AC45132E20A25DB800EC8C43 /* AppDelegate.swift */,
 				AC45133220A25DB800EC8C43 /* Main.storyboard */,
 				AC5D709F20B51D9700C90C46 /* DescriptionViewController.swift */,
@@ -112,6 +111,7 @@
 				ACD5D16420ACF42800603B65 /* RequestController.swift */,
 				ACB7ACBD20A518AA00AA3CC6 /* Response.swift */,
 				ACB7ACBB20A514C800AA3CC6 /* NetworkController.swift */,
+				ACD5D16320ACEFAA00603B65 /* Keychain */,
 				AC45133520A25DB800EC8C43 /* Assets.xcassets */,
 				AC45133720A25DB800EC8C43 /* LaunchScreen.storyboard */,
 				AC45133A20A25DB800EC8C43 /* Info.plist */,

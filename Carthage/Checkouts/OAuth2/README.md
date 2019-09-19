@@ -4,7 +4,7 @@ OAuth2
 [![Build Status](https://travis-ci.org/p2/OAuth2.svg?branch=master)](https://travis-ci.org/p2/OAuth2)
 [![License](https://img.shields.io/:license-apache-blue.svg)](LICENSE.txt)
 
-OAuth2 frameworks for **macOS**, **iOS** and **tvOS** written in Swift 3.0.
+OAuth2 frameworks for **macOS**, **iOS** and **tvOS** written in Swift 4.2.
 
 - [⤵️ Installation](#installation)
 - [🛠 Usage](#usage)
@@ -146,7 +146,7 @@ oauth2.authorize() { authParameters, error in
         print("Authorized! Additional parameters: \(params)")
     }
     else {
-        print("Authorization was cancelled or went wrong: \(error)")   // error will not be nil
+        print("Authorization was canceled or went wrong: \(error)")   // error will not be nil
     }
 }
 

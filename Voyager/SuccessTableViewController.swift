@@ -14,11 +14,8 @@ class SuccessTableViewController: UITableViewController, SubredditControllerDele
     
     let subredditController = SubredditController()
     
-    @IBOutlet weak var activityView: UIActivityIndicatorView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityView.startAnimating()
         subredditController.delegate = self
     }
     
@@ -30,7 +27,6 @@ class SuccessTableViewController: UITableViewController, SubredditControllerDele
     
     @IBAction func getSubs(_ sender: Any) {
     }
-    
     
     // MARK: - Table view data source
     
@@ -52,33 +48,7 @@ class SuccessTableViewController: UITableViewController, SubredditControllerDele
     
     func subredditsUpdated(subreddits: [Subreddit]) {
         DispatchQueue.main.async {
-            self.activityView.stopAnimating()
             self.tableView.reloadData()
         }
     }
-    
-    // MARK: - Navigation
-<<<<<<< HEAD
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toDescription" {
-//            if let indexPath = tableView.indexPathForSelectedRow, let vc = segue.destination as? DescriptionViewController {
-//                let subreddit = SubredditController.shared.subreddits[indexPath.row]
-//                vc.subreddit = subreddit
-//            }
-//        }
-//    }
 }
-=======
-// THIS IS BROKEN FOR NOW
-//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//         if segue.identifier == "toDescription" {
-//             if let indexPath = tableView.indexPathForSelectedRow, let vc = segue.destination as? DescriptionViewController {
-//                 let subreddit = SubredditController.shared.subreddits[indexPath.row]
-//                 vc.subreddit = subreddit
-//             }
-//         }
-//     }
-// }
->>>>>>> b6fbb2e55b50f6913027dfae057311dc40731a91
-

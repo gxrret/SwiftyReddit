@@ -15,7 +15,7 @@ class RequestController {
     
     func performRequest(_ method: HTTPMethod, requestURL: URLConvertible, parameters: [String: Any], headers: [String: String], completion: @escaping (_ json: Any?) -> Void) {
         
-        Alamofire.request(requestURL, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        AF.request(requestURL, method: method, parameters: parameters, encoding: JSONEncoding.default).responseJSON { (response) in
             
             switch(response.result) {
             case .success(_):
@@ -40,16 +40,16 @@ class RequestController {
         let params: Parameters = ["grant_type":"refresh_token",
                                   "refresh_token":"\(token)"]
         
-        let username = "ENTER_YOUR_CLIENT_ID"
-        let password = ""
+        let username = "qbv2lKywvh8s4Q"
+        let password = "G$tro2296!"
         let loginString = String(format: "%@:%@", username, password)
         let loginData = loginString.data(using: String.Encoding.utf8)! as NSData
         let base64EncodedString = loginData.base64EncodedString()
         
-        let headers = ["Content-Type" : "application/x-www-form-urlencoded",
+        let headers: HTTPHeaders = ["Content-Type" : "application/x-www-form-urlencoded",
                        "Authorization" : "Basic \(base64EncodedString)"]
         
-        Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (response) in
+        AF.request(url, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (response) in
             if let json = response.result.value as? [String:Any] {
                 guard let accessToken = json["access_token"] as? String else { return }
                 KeychainWrapper.standard.set(accessToken, forKey: "accessToken")

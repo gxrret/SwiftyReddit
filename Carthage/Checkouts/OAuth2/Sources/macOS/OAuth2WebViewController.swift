@@ -34,7 +34,7 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 	
 	/** Designated initializer. */
 	public init() {
-		super.init(nibName: nil, bundle: nil)!
+		super.init(nibName: nil, bundle: nil)
 	}
 	
 	/// Handle to the OAuth2 instance in play, only used for debug logging at this time.
@@ -60,7 +60,7 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 					interceptComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
 				}
 				else {
-					oauth?.logger?.warn("OAuth2", msg: "Failed to parse URL \(interceptURLString), discarding")
+					oauth?.logger?.warn("OAuth2", msg: "Failed to parse URL \(interceptURLString!), discarding")
 					interceptURLString = nil
 				}
 			}
@@ -78,7 +78,7 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 	public var onIntercept: ((URL) -> Bool)?
 	
 	/// Called when the web view is about to be dismissed manually.
-	public var onWillCancel: ((Void) -> Void)?
+	public var onWillCancel: (() -> Void)?
 	
 	/// Our web view; implicitly unwrapped so do not attempt to use it unless isViewLoaded() returns true.
 	var webView: WKWebView!
@@ -89,7 +89,7 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 		view.translatesAutoresizingMaskIntoConstraints = false
 		
 		progressIndicator = NSProgressIndicator(frame: NSZeroRect)
-		progressIndicator.style = .spinningStyle
+		progressIndicator.style = .spinning
 		progressIndicator.isDisplayedWhenStopped = false
 		progressIndicator.sizeToFit()
 		progressIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -127,7 +127,7 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 		
 		view.addSubview(webView)
 		view.addConstraint(NSLayoutConstraint(item: webView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 0.0))
-		view.addConstraint(NSLayoutConstraint(item: webView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0))
+		view.addConstraint(NSLayoutConstraint(item: webView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: (willBecomeSheet ? -40.0 : 0.0)))
 		view.addConstraint(NSLayoutConstraint(item: webView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 0.0))
 		view.addConstraint(NSLayoutConstraint(item: webView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1.0, constant: 0.0))
 		
@@ -136,6 +136,7 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 			let button = NSButton(frame: NSRect(x: 0, y: 0, width: 120, height: 20))
 			button.translatesAutoresizingMaskIntoConstraints = false
 			button.title = "Cancel"
+			button.bezelStyle = .rounded
 			button.target = self
 			button.action = #selector(OAuth2WebViewController.cancel(_:))
 			view.addSubview(button)
@@ -216,7 +217,7 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 	/**
 	Tells the web view to stop loading the current page, then calls the `onWillCancel` block if it has a value.
 	*/
-	func cancel(_ sender: AnyObject?) {
+	@objc func cancel(_ sender: AnyObject?) {
 		webView.stopLoading()
 		onWillCancel?()
 	}
@@ -243,6 +244,8 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 				else {
 					decisionHandler(.allow)
 				}
+				
+				return
 			}
 		}
 		
@@ -281,7 +284,7 @@ public class OAuth2WebViewController: NSViewController, WKNavigationDelegate, NS
 	
 	// MARK: - Window Delegate
 	
-	public func windowShouldClose(_ sender: Any) -> Bool {
+	public func windowShouldClose(_ sender: NSWindow) -> Bool {
 		onWillCancel?()
 		return false
 	}
